@@ -14,11 +14,11 @@ app.use(cors());
 app.use(helmet());
 
 // 정적 파일 제공 (React 빌드 파일)
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 // 모든 경로에 대해 React 앱 제공
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 app.listen(PORT, () => {
