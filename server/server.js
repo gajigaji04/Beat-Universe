@@ -21,6 +21,11 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
+app.get("/api/data", (req, res) => {
+  // 데이터를 반환하는 로직 추가
+  res.json({ message: "Hello, world!" });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
