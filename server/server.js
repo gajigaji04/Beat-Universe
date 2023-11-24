@@ -3,9 +3,18 @@ const path = require("path");
 const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
+const mysql = require("mysql");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
+
+// MySQL connection setup
+const con = mysql.createConnection({
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
+});
 
 // Connect to MySQL
 con.connect((err) => {

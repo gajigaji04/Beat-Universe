@@ -1,6 +1,6 @@
-// Header.jsx
-import React from "react"; // Remove useState from React import
-import { FiAlignJustify, FiAward } from "react-icons/fi";
+import React, { useState } from "react";
+import { FiAlignJustify } from "react-icons/fi";
+import { SiStardock } from "react-icons/si";
 import "../styles/Header.css";
 
 function Header({ toggleSidebar }) {
@@ -13,10 +13,13 @@ function Header({ toggleSidebar }) {
         </button>
 
         {/* 헤더 타이틀 */}
-        <h1>Header Title</h1>
+        <h1>
+          <SiStardock className="headerLogoIcon" />
+          {/* 헤더 문구 삽입 가능한 곳 */}
+          Bit-Univers
+        </h1>
 
         {/* 추가 아이콘 */}
-        <FiAward />
       </div>
     </header>
   );
