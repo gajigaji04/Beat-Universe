@@ -1,0 +1,36 @@
+/* 기존 헤더 스타일 */
+.header {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd; /* 구분선 스타일 추가 */
+}
+
+.header.mobile {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  /* 모바일 화면에 대한 추가 스타일 정의 */
+  .header {
+    padding: 1rem;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+}
