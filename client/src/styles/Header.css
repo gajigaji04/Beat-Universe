@@ -1,36 +1,29 @@
-/* 기존 헤더 스타일 */
+/* Header.css */
 .header {
-  background-color: rgb(255, 255, 255);
-  color: black;
-  padding: 1rem;
+  background-color: #000000cb;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.content {
   display: flex;
-  justify-content: space-between;
+  width: 96%;
+  max-width: 1100px;
+  margin: 0 auto;
   align-items: center;
-  border-bottom: 1px solid #ddd; /* 구분선 스타일 추가 */
+  justify-content: space-between; /* Use justify-content instead of justify-self */
 }
 
-.header.mobile {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-nav ul {
-  list-style: none;
+.navigation ul {
   display: flex;
+  list-style: none;
 }
 
-nav li {
-  margin-right: 1rem;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 600px) {
-  /* 모바일 화면에 대한 추가 스타일 정의 */
-  .header {
-    padding: 1rem;
-  }
-
-  nav {
-    margin-top: 1rem;
-  }
+.navigation li + li {
+  margin-left: 30px;
 }

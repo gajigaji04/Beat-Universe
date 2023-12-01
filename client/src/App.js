@@ -1,47 +1,31 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import ReactDOM from "react-dom";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar"; // Import the Sidebar component
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
-import Footer from "./components/Footer.js";
-import "./App.css";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<React.StrictMode>...</React.StrictMode>);
-
-const App = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [sidebarVisible, setSidebarVisible] = useState(false); // Add state for sidebar visibility
-
-  // Define the toggleSidebar function
-  const toggleSidebar = () => {
-    setSidebarVisible(!sidebarVisible);
-  };
-
-  useEffect(() => {
-    axios
-      .get("/api/data")
-      .then((response) => {
-        setData(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      });
-  }, []);
-
+function App() {
   return (
-    <div className="App">
-      <Header onToggleSidebar={toggleSidebar} />
-      {sidebarVisible && <Sidebar onClose={() => setSidebarVisible(false)} />}
-      <div className="main-content"></div>
-      <Footer />
-      {loading ? <p>Loading...</p> : <pre>{JSON.stringify(data, null, 2)}</pre>}
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <div className="container">
+          <Sidebar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
