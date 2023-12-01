@@ -1,28 +1,31 @@
-// 예제 컴포넌트 (예: App.js)
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
-const App = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    // 서버에서 데이터 가져오기
-    axios
-      .get("/api/data")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
-
+function App() {
   return (
-    <div>
-      <h1>Data from Server:</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <div className="container">
+          <Sidebar />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
