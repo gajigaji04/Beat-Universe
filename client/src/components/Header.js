@@ -1,26 +1,21 @@
 import React from "react";
-import "../styles/Header.css";
-import { FiAlignJustify } from "react-icons/fi";
+import { FiAlignJustify, FiAward } from "react-icons/fi"; // 필요한 아이콘들을 import
+import "../styles/Header.css"; // 스타일 파일을 import
 
 function Header({ toggleSidebar }) {
   return (
     <header className="header">
       <div className="content">
-        {/* 사이드바 토글 버튼 */}
-        <FiAlignJustify>
-          <button onClick={toggleSidebar}>Toggle Sidebar</button>/
-        </FiAlignJustify>
+        {/* 헤더 아이콘 */}
+        <button onClick={toggleSidebar} className="sidebar-toggle-button">
+          <FiAlignJustify />
+        </button>
 
-        <div>
-          <h1>Beat-Universe_logo</h1>
-        </div>
+        {/* 헤더 타이틀 */}
+        <h1>Header Title</h1>
 
-        <nav className="navigation">
-          <ul>
-            <li>메뉴1</li>
-            <li>메뉴2</li>
-          </ul>
-        </nav>
+        {/* 추가 아이콘 */}
+        <FiAward />
       </div>
     </header>
   );
