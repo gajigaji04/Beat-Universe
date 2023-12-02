@@ -5,7 +5,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 require("dotenv").config();
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 
 // CORS 활성화 (보안 미들웨어보다 먼저 선언)
 app.use(cors());
