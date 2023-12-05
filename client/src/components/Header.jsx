@@ -1,6 +1,7 @@
-import React from "react";
-import { FiAlignJustify, FiAward } from "react-icons/fi"; // 필요한 아이콘들을 import
-import "../styles/Header.css"; // 스타일 파일을 import
+// Header.jsx
+import React from "react"; // Remove useState from React import
+import { FiAlignJustify, FiAward } from "react-icons/fi";
+import "../styles/Header.css";
 
 function Header({ toggleSidebar }) {
   return (
