@@ -17,6 +17,11 @@ footer {
   text-align: center;
 }
 
+.routerPages {
+  flex: 4;
+  background-color: gray;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
