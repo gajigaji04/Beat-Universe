@@ -15,6 +15,8 @@ function Header({ toggleSidebar }) {
         {/* 헤더 타이틀 */}
         <h1>
           <SiStardock className="headerLogoIcon" />
+          {/* 헤더 문구 삽입 가능한 곳 */}
+          Bit-Univers
         </h1>
 
         {/* 추가 아이콘 */}
