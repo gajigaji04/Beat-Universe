@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  background-color: black;
+  background-color: white;
+  border-bottom: 1px solid gray;
 }
 
 .content {
@@ -15,12 +15,13 @@
 
 .headerLogoIcon {
   margin: auto;
+  color: black;
 }
 
 .sidebar-toggle-button {
   background: none;
   border: none;
-  color: #fff;
+  color: black;
   cursor: pointer;
   margin: 0 1rem;
   font-size: 2rem;
