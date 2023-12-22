@@ -1,3 +1,5 @@
+/* src/styles/Header.css */
+
 .header {
   max-width: auto;
   margin: 0 auto;
@@ -6,6 +8,11 @@
   align-items: center;
   background-color: white;
   border-bottom: 1px solid gray;
+  height: 40px; /* Adjust the height as needed */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .content {
@@ -13,10 +20,24 @@
   align-items: center;
 }
 
-.headerLogoIcon {
-  margin: auto;
-  color: black;
+/* 헤더 로고 */
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px; /* Add spacing between the logo and navigation */
 }
+
+.headerLogoIcon {
+  margin-right: 8px; /* Add spacing between the icon and text */
+}
+
+.headerLogo span {
+  color: black;
+  font-size: 1.5rem;
+}
+
+/* 사이드바 버튼 */
 
 .sidebar-toggle-button {
   background: none;
@@ -24,5 +45,57 @@
   color: black;
   cursor: pointer;
   margin: 0 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+/* 검색창 */
+
+.search-form {
+  margin-left: auto; /* Move the search form to the right */
+  margin-right: 1rem; /* Add margin to the right for spacing */
+  display: flex; /* Ensure the input and button align horizontally */
+  gap: 1rem; /* Add spacing between input and button */
+}
+
+.search-form input {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.search-form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* 헤더 메뉴 버튼 */
+
+.header-navigation {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.header-navigation a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  margin-right: 16px; /* Add spacing between navigation links */
+}
+
+/* 추가 아이콘 */
+
+.header-buttons {
+  margin-left: auto; /* Move buttons to the right */
+  display: flex; /* Ensure the buttons align horizontally */
+}
+
+.login-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin: 0 1rem;
+  font-size: 1.5rem;
 }

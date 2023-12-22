@@ -3,8 +3,8 @@ import React from "react";
 function About() {
   return (
     <div>
-      <h2>About Us</h2>
-      <p>This is the about page content.</p>
+      <h2>About Page</h2>
+      {/* Add About page content here */}
     </div>
   );
 }

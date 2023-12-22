@@ -1,19 +1,9 @@
+// src/components/Footer.js
 import React from "react";
-import "../styles/Footer.css";
-import { FaGithub } from "react-icons/fa";
+import "../styles/Footer.css"; // Import the CSS file for Footer styles
 
 function Footer() {
-  return (
-    <footer className="footer">
-      <p>&copy; 2023 Bit-Universe</p>
-      <p>
-        <h2>Connect</h2>
-      </p>
-      <p>
-        <FaGithub />
-      </p>
-    </footer>
-  );
+  return <div className="footer">{/* Footer content goes here */}</div>;
 }
 
 export default Footer;
