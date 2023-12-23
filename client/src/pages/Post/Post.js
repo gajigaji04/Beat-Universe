@@ -5,7 +5,9 @@ import "./Post.css";
 function Post() {
   return (
     <div className="post-container">
-      <h2>Post Page</h2>
+      <div className="post-page-title">
+        <h2>Post Page</h2>
+      </div>
       <div className="post-list">
         {[1, 2, 3, 4, 5].map((index) => (
           <div key={index} className="post-box">

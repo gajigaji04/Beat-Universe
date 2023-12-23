@@ -1,4 +1,8 @@
 /* src/pages/Post/Post.css */
+.post-page-title{
+  border-bottom: 1px solid gray;
+}
+
 .post-container {
   padding: 20px;
 }
@@ -13,7 +17,7 @@
   border: 1px solid #ccc;
   padding: 15px;
   width: 60%;
-  max-width: 600px;
+  max-width: 850px;
   margin: 10px;
   display: flex;
   align-items: center;

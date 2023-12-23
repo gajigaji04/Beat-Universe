@@ -1,8 +1,9 @@
-// src/components/Header.js
 import React, { useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { SiStardock } from "react-icons/si";
 import { MdSearch, MdLogin } from "react-icons/md";
+import { IoIosSettings } from "react-icons/io";
+import { FaMoon } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
@@ -58,6 +59,12 @@ function Header({ toggleSidebar }) {
         <div className="header-buttons">
           <button className="login-button">
             <MdLogin />
+          </button>
+          <button className="Setting-button">
+            <IoIosSettings />
+          </button>
+          <button className="Dark-button">
+            <FaMoon />
           </button>
         </div>
       </div>

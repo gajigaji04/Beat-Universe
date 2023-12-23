@@ -8,7 +8,7 @@
   align-items: center;
   background-color: white;
   border-bottom: 1px solid gray;
-  height: 40px; /* Adjust the height as needed */
+  height: 15px; /* Adjust the height as needed */
   position: fixed;
   width: 100%;
   top: 0;
@@ -92,6 +92,24 @@
 }
 
 .login-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.Setting-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.Dark-button {
   background: none;
   border: none;
   color: black;
