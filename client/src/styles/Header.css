@@ -8,7 +8,7 @@
   align-items: center;
   background-color: white;
   border-bottom: 1px solid gray;
-  height: 15px; /* Adjust the height as needed */
+  height: 15px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -25,11 +25,11 @@
 .headerLogo {
   display: flex;
   align-items: center;
-  margin-right: 16px; /* Add spacing between the logo and navigation */
+  margin-right: 16px;
 }
 
 .headerLogoIcon {
-  margin-right: 8px; /* Add spacing between the icon and text */
+  margin-right: 8px;
 }
 
 .headerLogo span {
@@ -51,14 +51,15 @@
 /* 검색창 */
 
 .search-form {
-  margin-left: auto; /* Move the search form to the right */
-  margin-right: 1rem; /* Add margin to the right for spacing */
-  display: flex; /* Ensure the input and button align horizontally */
-  gap: 1rem; /* Add spacing between input and button */
+  margin-left: auto;
+  margin-right: 120px;
+  display: flex;
+  gap: 1rem;
 }
 
 .search-form input {
-  padding: 8px;
+  flex: 1;
+  padding: 5px;
   font-size: 1rem;
 }
 
@@ -81,14 +82,15 @@
   text-decoration: none;
   color: black;
   font-size: 1rem;
-  margin-right: 16px; /* Add spacing between navigation links */
+  margin-right: 16px;
 }
 
 /* 추가 아이콘 */
 
 .header-buttons {
-  margin-left: auto; /* Move buttons to the right */
-  display: flex; /* Ensure the buttons align horizontally */
+  margin-left: auto;
+  margin-right: 50px;
+  display: flex;
 }
 
 .login-button {
@@ -101,15 +103,6 @@
 }
 
 .Setting-button {
-  background: none;
-  border: none;
-  color: black;
-  cursor: pointer;
-  margin: 0 1rem;
-  font-size: 1.5rem;
-}
-
-.Dark-button {
   background: none;
   border: none;
   color: black;

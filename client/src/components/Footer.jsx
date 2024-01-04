@@ -23,12 +23,12 @@ const Footer = () => {
   return (
     <div className="wrapper">
       <footer className="contentWrapper">
-        <p>&copy; {new Date().getFullYear()} React-Node.js Web site</p>
-        <p>
+        <p className="mailInfo">
           <IoIosMailUnread className="mailIcon" onClick={handleMailClick} />
           <FaGithub className="githubIcon" onClick={handleGithubClick} />
-          <SiBloglovin className="blogIcon" onClick={handleBlogClick} />
+          <SiBloglovin className="blogIcon" onClick={handleBlogClick} />{" "}
         </p>
+        <p>&copy; {new Date().getFullYear()} React-Node.js Web site</p>
       </footer>
     </div>
   );

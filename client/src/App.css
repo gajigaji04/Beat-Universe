@@ -44,7 +44,6 @@ nav a:hover {
   padding-top: 80px; /* Adjust the value based on your header's height */
 }
 
-/* Optionally, add styles for the fixed header */
 .header {
   position: fixed;
   top: 0;
@@ -52,7 +51,5 @@ nav a:hover {
   right: 0;
   background-color: white;
   border-bottom: 1px solid gray;
-  height: 50px;
-  z-index: 1000;
   /* Add other styles as needed */
 }

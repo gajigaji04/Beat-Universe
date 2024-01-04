@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
@@ -26,8 +25,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/post" element={<Post />} />
           </Routes>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </Router>
   );

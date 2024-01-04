@@ -1,0 +1,75 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* Adjust the padding as needed */
+}
+
+.content {
+  flex: 1; /* Takes remaining space */
+}
+
+.side-image {
+  max-width: 300px; /* Adjust the maximum width as needed */
+  margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.side-image img {
+  width: 100%;
+  height: auto;
+}
+
+.home-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Add this media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headerLogo {
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+
+  .header-navigation {
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+
+  .search-form {
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+
+  .header-buttons {
+    flex-direction: column;
+  }
+
+  .login-button,
+  .Setting-button {
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+}
+
+/* Add this media query for larger screens */
+@media screen and (min-width: 769px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .headerLogo {
+    margin-right: auto; /* Push the logo to the left */
+  }
+
+  .header-navigation {
+    margin-left: auto; /* Push the navigation links to the right */
+  }
+
+  .search-form {
+    margin-left: auto; /* Push the search form to the right */
+  }
+}

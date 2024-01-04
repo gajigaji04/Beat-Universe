@@ -13,29 +13,28 @@
   flex-direction: column;
 }
 
+/* 기존 스타일 유지 */
+.mailInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem; /* 조절 가능한 간격 */
+}
+
 .mailIcon {
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-  margin: 0 1rem;
-  font-size: 1.5rem;
+  margin-right: 0.5rem; /* 조절 가능한 간격 */
+  font-size: 2rem;
 }
 
-.githubIcon {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin: 0 1rem;
-  font-size: 1.5rem;
-}
-
+.githubIcon,
 .blogIcon {
   background: none;
   border: none;
   color: white;
   cursor: pointer;
   margin: 0 1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }

@@ -3,7 +3,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { SiStardock } from "react-icons/si";
 import { MdSearch, MdLogin } from "react-icons/md";
 import { IoIosSettings } from "react-icons/io";
-import { FaMoon } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
@@ -32,7 +32,7 @@ function Header({ toggleSidebar }) {
         <h2 className="headerLogo">
           <SiStardock className="headerLogoIcon" />
           {/* 헤더 문구 삽입 가능한 곳 */}
-          <span>Bit-Univers</span>
+          <span>Logo</span>
         </h2>
 
         {/* Navigation Links */}
@@ -59,12 +59,10 @@ function Header({ toggleSidebar }) {
         <div className="header-buttons">
           <button className="login-button">
             <MdLogin />
+            Login
           </button>
           <button className="Setting-button">
             <IoIosSettings />
-          </button>
-          <button className="Dark-button">
-            <FaMoon />
           </button>
         </div>
       </div>
