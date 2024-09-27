@@ -1,3 +1,5 @@
+/* src/styles/Header.css */
+
 .header {
   max-width: auto;
   margin: 0 auto;
@@ -6,6 +8,11 @@
   align-items: center;
   background-color: white;
   border-bottom: 1px solid gray;
+  height: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .content {
@@ -13,10 +20,24 @@
   align-items: center;
 }
 
-.headerLogoIcon {
-  margin: auto;
-  color: black;
+/* 헤더 로고 */
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
 }
+
+.headerLogoIcon {
+  margin-right: 8px;
+}
+
+.headerLogo span {
+  color: black;
+  font-size: 1.5rem;
+}
+
+/* 사이드바 버튼 */
 
 .sidebar-toggle-button {
   background: none;
@@ -24,5 +45,68 @@
   color: black;
   cursor: pointer;
   margin: 0 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+/* 검색창 */
+
+.search-form {
+  margin-left: auto;
+  margin-right: 120px;
+  display: flex;
+  gap: 1rem;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.search-form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* 헤더 메뉴 버튼 */
+
+.header-navigation {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.header-navigation a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  margin-right: 16px;
+}
+
+/* 추가 아이콘 */
+
+.header-buttons {
+  margin-left: auto;
+  margin-right: 50px;
+  display: flex;
+}
+
+.login-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.Setting-button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  margin: 0 1rem;
+  font-size: 1.5rem;
 }

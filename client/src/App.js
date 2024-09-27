@@ -1,28 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Post from "./pages/Post/Post";
+import "./App.css"; // Import the main CSS file for global styles
 
 function App() {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <Router>
       <div>
-        <Header />
-        <div className="container">
-          {/* Sidebar */}
-          <Sidebar />
-          {/* <div className="others">other pages</div> */}
-          <main>
-            <Routes className="routerPages">
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
+        <Header toggleSidebar={toggleSidebar} />
+        <div className="app-container">
+          {/* Rest of your content */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/post" element={<Post />} />
+          </Routes>
         </div>
         <Footer />
       </div>
